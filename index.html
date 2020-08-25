@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+ 
+</head>
+<style type="text/css">
+  button,
+  div,
+  form,
+  input {
+    margin: 10px;
+  }</style>
+
+<body>
+
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+    
+    <div id="buttons-view"></div>
+
+    <form id="weather-form">
+      <label for="weather-input">Weather Search</label>
+      <input type="text" id="weather-input">
+      <br>
+
+      <input id="add-city" type="submit" value="submit">
+    </form>
+    <script type="text/javascript">
+
+function displayWeatherinfo() {
+
+var weather = $(this).attr("data-name");
+var queryURL =
+
+
+function renderButtons() {
+
+$("#buttons-view").empty();
+
+for (var i = 0; i < weather.length; i++) {
+
+  var a = $("<button>");
+
+  a.addClass("weather-btn");
+ 
+  a.attr("data-name", weather[i]);
+ 
+  a.text(weather[i]);
+
+
+  $("#buttons-view").append(a);
+  }
+}
+}
+
+$("#add-city").on("click", function(event) {
+        event.preventDefault();
+       
+        var movie = $("#city-input").val().trim();
+
+        
+        cities.push(city);
+
+        renderButtons();
+      });
+
+      $(document).on("click", ".weather-btn", displayMovieInfo);
+
+      renderButtons();
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
